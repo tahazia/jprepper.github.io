@@ -1,0 +1,161 @@
+<style type="text/css">
+
+		/* Layout */
+		body {
+			min-width: 630px;
+		}
+
+		#container {
+			padding-left: 200px;
+			padding-right: 400px;
+		}
+		
+		#container .column {
+			position: relative;
+			float: left;
+		}
+		
+		#center {
+			padding: 20px 20px;
+			width: 100%;
+		}
+		
+		#left {
+			width: 180px;
+			padding: 0 10px;
+			right: 240px;
+			margin-left: -100%;
+		}
+		
+		#right {
+			width: 130px;
+			padding: 0px;
+			margin-right: -100%;
+		}
+		
+		#footer {
+			clear: both;
+		}
+		
+		/* IE hack */
+		* html #left {
+			left: 150px;
+		}
+
+		/* Make the columns the same height as each other */
+		#container {
+			overflow: hidden;
+		}
+
+		#container .column {
+
+			padding-bottom: 1008em;
+			margin-bottom: -1000em;
+		}
+
+
+		/* Fix for the footer */
+		* html body {
+			overflow: auto;
+			width:100%;
+			height: 100;
+		}
+		
+		* html #footer-wrapper {
+			float: left;
+			position: relative;
+			width: 100%;
+			padding-bottom: 10010px;
+			margin-bottom: -10000px;
+			background: black;
+		}
+
+		/* Aesthetics */
+		body {
+			background: url(J_IRC.jpg);
+			background-color: #D6EBF2;
+			background-size:100%;
+			background-repeat: no-repeat;
+			width: 100%;
+			height:100%;
+			margin: 0;
+			padding: 0;
+			font-family:Sans-serif;
+			line-height: 1.5em;
+		}
+		
+		p {
+			color: #555;
+		}
+
+		footcolor {
+			color: white;
+		}
+
+		nav ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		nav ul a {
+			color: white;
+			text-decoration: none;
+		}
+
+		#footer {
+		  position: absolute;
+			 right: 0;
+			 bottom: 0;
+			 left: 0;
+			 padding: 1rem;
+			 background-color: black;
+			 text-align: center;
+			font-size: small;
+			text-decoration-color: white;
+		}
+
+		#header {
+			font-size: large;
+			padding:3.0em 0em 3.0em 0;
+			margin-left: 3em;
+
+		}
+
+		#left {
+			background: #585858;
+		}
+		
+		#center {
+		}
+
+		#container .column {
+			padding-top: 1em;
+		}
+
+		#menu {
+		    width: 90%;
+		    height: 0px;
+		    font-size: 15px;
+		    font-family: sans-serif;
+		    font-weight: bold;
+		    text-align: right;
+		    align-content: right;
+		    background-color: #fff;
+		        border-radius: 8px;
+		        padding-left: 20px;
+		}
+
+		#menu ul{
+			height: auto;
+			padding:8px 0px;
+			margin: 0px;
+		}
+
+		#menu li{
+			display: inline;
+			padding:10px;
+		}
+
+		
+	</style>

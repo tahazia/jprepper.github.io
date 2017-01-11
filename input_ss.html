@@ -26,9 +26,20 @@
       </ul>
     </nav>
   <div class ="mainarea">
-    <h1 align="center">Welcome to Jprepper</h1>
-    <p>Jprepper is platform that allows you to setup and connect to active study sessions on campus. Feel free to browse through the currently active study sessions available or create one of your own!</p>
-										
+		<form method="POST" action="add-studysession.php">
+			<h2>New Study Session</h2> <br>
+ 			Course Number: <input type="text" name="ID">
+			<a href="javascript:alert('Course list')">...</a>
+			<br>
+			Subtopic: <input type="text" name="Stopic">
+ 			<br>
+			Moderated By: <input type="text" name="ModeratedBy">
+			<a href="javascript:alert('User list')">...</a>
+			<br>
+			Max Participants: <input type="number" name="MaxParticipants">
+			<br>
+			<input type="submit" value="Create Study Session">
+		</form>	
   </div>
 </div>
 </body>

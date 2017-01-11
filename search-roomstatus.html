@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href= "css/style.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Jprepper</title>
+</head>
+
+<body>
+	<script language = "javascript" type = "text/javascript">
+
+            function ajaxFunction(){
+               var ajaxRequest;  
+               
+               try {
+
+                  ajaxRequest = new XMLHttpRequest();
+               }catch (e) {
+
+                  try {
+                     ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
+                  }catch (e) {
+                     try{
+                        ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                     }catch (e){
+
+                        alert("Your browser broke!");
+                        return false;
+                     }
+                  }
+               }
+               
+
+               ajaxRequest.onreadystatechange = function(){
+                  if(ajaxRequest.readyState == 4){
+                     var ajaxDisplay = document.getElementById('ajaxDiv');
+                     ajaxDisplay.innerHTML = ajaxRequest.responseText;
+                  }
+               }
+               
+					
+               var Status = document.getElementById('Status').value;
+
+               var queryString = "?Status=" + Status ;
+               ajaxRequest.open("GET", "get_roomstatus.php" + queryString, true);
+               ajaxRequest.send(null); 
+            }
+      </script>
+<ul class="header">
+    <img class="logo" src="images/J_logo.png"/>
+    <li class = "header"><a class="active header" href="imprint.html">Imprint Page</a></li>
+    <li class = "header"><a class = "header" href="contact.html">Contact</a></li>
+    <li class = "header"><a class = "header"  href="about.html">About</a></li>
+ </ul>
+
+<div class = "clearfix">
+
+    <nav>
+      <ul class="sidebar">
+        <li><a class="sidebar" href="index.html">Home</a></li>
+        <li><a class="sidebar" href="search.html">Search Study Groups</a></li>
+        <li><a class="sidebar" href="input_ss.html">Create Study Group</a></li>
+        <li><a class="sidebar" href="Homework.html"> DBWA Homework</a></li>
+      </ul>
+    </nav>
+  <div class ="mainarea">
+		<form name = 'myForm'>
+			         Search for Room Status: <input type = 'text' id = 'Status' /> <br />
+			         <input type = 'button' onclick = 'ajaxFunction()' value = 'Search'/>
+					</form>
+		      
+		      		<div id = 'ajaxDiv'>Enter a room status such as "occupied"</div>		
+  </div>
+</div>
+</body>
+<div id="footer-wrapper">
+	<footer id="footer"><footcolor>© Tayyab Mateen, Taha Zia, David Gjorgoski</footcolor></footer>
+</div>
+
+
+</html>
+	<header><p>
+		<h1>
+    		<img src="images/J_logoNB.png" alt="jprepper logo" height="108" width="105" style="float:left;width:100;height:100;"/>
+		</h1></p></header>
+
+<header>
+	<div id="header">
+		<div id="menu">
+		<ul><li><a href="imprint.html">Imprint Page</a></li>
+		<li><a href="services.html">Services</a></li>
+		<li><a href="contactus.html">Contact Us</a></li>
+		</ul>
+		</div>
+	</div>
+</header>
+
+	<div id="container">
+
+		<main id="center" align="right" class="column">
+			<form name = 'myForm'>
+	         Search for Room Status: <input type = 'text' id = 'Status' /> <br />
+	         <input type = 'button' onclick = 'ajaxFunction()' value = 'Search'/>
+			</form>
+      
+      		<div id = 'ajaxDiv'>Enter a room status such as "occupied"</div>
+
+		</main>
+
+		<nav id="left" class="column">
+			<h3>On this Site</h3>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="#">Profile</a></li>
+				<li><a href="#">Study Groups</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Sign Up</a></li>
+			</ul>
+			<hr>
+			<ul>
+				<li><a href="maintenance.html">Maintenance Page</a></li>
+			</ul>
+
+		</nav>
+
+	</div>
+</body>
+<div id="footer-wrapper">
+	<footer id="footer"><footcolor>© Tayyab Mateen, Taha Zia, David Gjorgoski</footcolor></footer>
+</div>
+
+
+</html>

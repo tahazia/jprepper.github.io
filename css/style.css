@@ -1,161 +1,151 @@
-<style type="text/css">
 
-		/* Layout */
-		body {
-			min-width: 630px;
-		}
+/*For Header bar with Logo*/
+ul.header{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
 
-		#container {
-			padding-left: 200px;
-			padding-right: 400px;
-		}
-		
-		#container .column {
-			position: relative;
-			float: left;
-		}
-		
-		#center {
-			padding: 20px 20px;
-			width: 100%;
-		}
-		
-		#left {
-			width: 180px;
-			padding: 0 10px;
-			right: 240px;
-			margin-left: -100%;
-		}
-		
-		#right {
-			width: 130px;
-			padding: 0px;
-			margin-right: -100%;
-		}
-		
-		#footer {
-			clear: both;
-		}
-		
-		/* IE hack */
-		* html #left {
-			left: 150px;
-		}
+li.header {
+    float: left;
+    padding-top: 50px;
+}
 
-		/* Make the columns the same height as each other */
-		#container {
-			overflow: hidden;
-		}
+li a.header {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
 
-		#container .column {
+li a.header:hover {
+    background-color: #111;
+}
+/*For Logo Insertion*/
+img.logo{
+    float:left;
+    width:100px;
+    height:100px;
+}
 
-			padding-bottom: 1008em;
-			margin-bottom: -1000em;
-		}
+/*For SideNavbar*/
+nav {
+    float: left;
+    width: 100px;
+}
+ul.sidebar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-width: 100px;
+    height: 60%;
+    background-color: #f1f1f1;
+}
+li a.sidebar {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+/* Change the link color on hover */
+li a.sidebar:hover {
+    background-color: #555;
+    color: white;
+}
+/*For main style of the page*/
+body{
+    background-color: #D6EBF2;
+    background-image: url(J_IRC.jpg);
+    background-size:100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height:100%;
+    margin: 0;
+    padding: 0;
+    font-family:Sans-serif;
+    line-height: 1.5em;
+    z-index: -1;
+}
+.clearfix{
+    overflow: auto;
+}
+
+div.mainarea{
+    max-width: 100%;
+    max-height: 600px;
+    min-height: 400px;
+    margin-left: 100px;
+    /*background-color: #ffffff;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    border: 2px solid black;*/
+}
+
+div.mainarea form{
+    margin: 5%;
+    font-weight: bold;
+    color: #000000;
+}
+div.mainarea p{
+    margin: 2%;
+    font-weight: bold;
+    color: #000000;
+}
 
 
-		/* Fix for the footer */
-		* html body {
-			overflow: auto;
-			width:100%;
-			height: 100;
-		}
-		
-		* html #footer-wrapper {
-			float: left;
-			position: relative;
-			width: 100%;
-			padding-bottom: 10010px;
-			margin-bottom: -10000px;
-			background: black;
-		}
+* html #footer-wrapper {
+            float: left;
+            position: relative;
+            width: 100%;
+            padding-bottom: 10010px;
+            margin-bottom: -10000px;
+            background: black;
+}
+footcolor {
+    color: white;
+}
 
-		/* Aesthetics */
-		body {
-			background: url(J_IRC.jpg);
-			background-color: #D6EBF2;
-			background-size:100%;
-			background-repeat: no-repeat;
-			width: 100%;
-			height:100%;
-			margin: 0;
-			padding: 0;
-			font-family:Sans-serif;
-			line-height: 1.5em;
-		}
-		
-		p {
-			color: #555;
-		}
 
-		footcolor {
-			color: white;
-		}
+#footer {
+    clear:both;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: black;
+    text-align: center;
+    font-size: small;
+    text-decoration-color: white;
+}
 
-		nav ul {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-		}
-		
-		nav ul a {
-			color: white;
-			text-decoration: none;
-		}
+/* For Result Tables:*/
+table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+ td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
 
-		#footer {
-		  position: absolute;
-			 right: 0;
-			 bottom: 0;
-			 left: 0;
-			 padding: 1rem;
-			 background-color: black;
-			 text-align: center;
-			font-size: small;
-			text-decoration-color: white;
-		}
+ tr:{background-color: #f2f2f2;}
 
-		#header {
-			font-size: large;
-			padding:3.0em 0em 3.0em 0;
-			margin-left: 3em;
+ tr:hover {background-color: #ddd;}
 
-		}
+ th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: lightblue;
+    color: white;
+}
 
-		#left {
-			background: #585858;
-		}
-		
-		#center {
-		}
+/*For listing Pages*/
+ul.searchpages {list-style-position:inside;}
+/*------*/
 
-		#container .column {
-			padding-top: 1em;
-		}
-
-		#menu {
-		    width: 90%;
-		    height: 0px;
-		    font-size: 15px;
-		    font-family: sans-serif;
-		    font-weight: bold;
-		    text-align: right;
-		    align-content: right;
-		    background-color: #fff;
-		        border-radius: 8px;
-		        padding-left: 20px;
-		}
-
-		#menu ul{
-			height: auto;
-			padding:8px 0px;
-			margin: 0px;
-		}
-
-		#menu li{
-			display: inline;
-			padding:10px;
-		}
-
-		
-	</style>
